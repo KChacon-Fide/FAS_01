@@ -1,0 +1,233 @@
+:root{
+  --blue:#1f3a93;      /* azul principal */
+  --blue2:#162b6f;     /* azul profundo */
+  --yellow:#f2b705;    /* acento amarillo */
+  --text:#0f172a;
+  --muted:#6b7280;
+  --border:#e5e7eb;
+}
+
+*{ box-sizing:border-box; }
+html,body{ height:100%; }
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background:#fff;
+}
+
+.login-wrap{
+  min-height:100vh;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.login-left{
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding: clamp(24px, 4vw, 56px);
+}
+
+.login-box{
+  width:min(440px, 100%);
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom: 22px;
+}
+
+.brand-icon{
+  width:44px;
+  height:44px;
+  border-radius:12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: rgba(31,58,147,.10);
+  color: var(--blue);
+  font-size: 22px;
+}
+
+.brand-name{
+  font-weight: 800;
+  letter-spacing:.2px;
+  color: var(--blue);
+  line-height:1.1;
+}
+.brand-sub{
+  font-size:.85rem;
+  color: var(--muted);
+}
+
+.title{
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: var(--blue);
+  margin: 0 0 6px;
+}
+
+.subtitle{
+  margin: 0 0 24px;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.form-label{
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+
+.form-control{
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 14px;
+}
+
+.form-control:focus{
+  border-color: rgba(31,58,147,.35);
+  box-shadow: 0 0 0 .25rem rgba(31,58,147,.12);
+}
+
+.pass-wrap{
+  position:relative;
+}
+
+.pass-toggle{
+  position:absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0;
+  background: transparent;
+  color: #64748b;
+  font-size: 18px;
+  padding: 8px;
+  cursor:pointer;
+}
+
+.link-reset{
+  font-size:.9rem;
+  color: var(--blue);
+  text-decoration:none;
+  font-weight:700;
+}
+.link-reset:hover{ text-decoration:underline; }
+
+.check{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color: var(--muted);
+  font-size: .95rem;
+  user-select:none;
+}
+.check input{
+  width:18px;
+  height:18px;
+  accent-color: var(--blue);
+}
+
+.btn-login{
+  border-radius: 8px;
+  background: var(--blue);
+  border-color: var(--blue);
+  padding: 14px 16px;
+  font-weight: 700;
+}
+.btn-login:hover{
+  background: var(--blue2);
+  border-color: var(--blue2);
+}
+
+.hint{
+  color: var(--muted);
+  font-size: .95rem;
+}
+.link-join{
+  color: var(--blue);
+  font-weight: 800;
+  text-decoration:none;
+}
+.link-join:hover{ text-decoration:underline; }
+
+.alert{
+  border-radius: 10px;
+}
+
+/* --- LADO DERECHO --- */
+.login-right{
+  position:relative;
+  overflow:hidden;
+  background:
+    linear-gradient(0deg, rgba(31,58,147,.78), rgba(31,58,147,.78)),
+    url("../../assets/img/login-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+.right-overlay{
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(900px 500px at 50% 80%, rgba(0,0,0,.25), transparent 60%),
+    radial-gradient(600px 400px at 20% 20%, rgba(0,0,0,.15), transparent 60%);
+}
+
+.right-content{
+  position:absolute;
+  left: 8%;
+  right: 8%;
+  bottom: 16%;
+  color:#fff;
+  z-index:2;
+}
+
+.right-title{
+  font-size: clamp(1.6rem, 2.5vw, 2.4rem);
+  font-weight: 900;
+  line-height:1.15;
+  margin:0 0 10px;
+}
+
+.accent{
+  color: var(--yellow);
+}
+
+.right-sub{
+  margin:0 0 22px;
+  color: rgba(255,255,255,.86);
+  max-width: 560px;
+}
+
+/* dots */
+.dots{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+.dot{
+  width: 54px;
+  height: 10px;
+  border-radius: 999px;
+  border:0;
+  background: rgba(255,255,255,.45);
+  cursor:pointer;
+  transition: all .18s ease;
+}
+.dot.active{
+  background: var(--yellow);
+  width: 64px;
+}
+
+/* Responsive */
+@media (max-width: 992px){
+  .login-wrap{ grid-template-columns: 1fr; }
+  .login-right{ display:none; }
+  .login-left{ min-height:100vh; }
+}

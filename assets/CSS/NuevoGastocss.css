@@ -1,0 +1,115 @@
+/* NuevoGasto - solo extras, mantiene la línea del dashboard */
+
+.ng-grid {
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    gap: 14px;
+    margin-top: 16px;
+}
+
+.ng-panel .form-control,
+.ng-panel .form-select {
+    border-radius: 14px;
+}
+
+.preview-card {
+    background: #f7fbff;
+    border-radius: 16px;
+    padding: 14px;
+    border: 1px solid rgba(31, 58, 147, .10);
+}
+
+.preview-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.preview-title {
+    font-weight: 1000;
+    font-size: 1.15rem;
+    margin-bottom: 4px;
+}
+
+.preview-sub {
+    color: var(--muted);
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.dot-sep {
+    opacity: .65;
+}
+
+.preview-amount {
+    font-size: 1.7rem;
+    font-weight: 1100;
+    color: #b42318;
+    margin-bottom: 8px;
+}
+
+.preview-note {
+    color: var(--muted);
+    font-size: .95rem;
+}
+
+.muted {
+    color: var(--muted);
+    font-weight: 800;
+}
+
+.tips {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tip {
+    display: flex;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 14px;
+    background: #fff;
+    border: 1px solid rgba(15, 23, 42, .06);
+    box-shadow: 0 12px 30px rgba(15, 23, 42, .05);
+}
+
+.tip i {
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(242, 183, 5, .18);
+    color: #111827;
+}
+
+.tip-title {
+    font-weight: 1000;
+}
+
+.tip-sub {
+    color: var(--muted);
+    font-size: .92rem;
+}
+
+#btnGuardar {
+    border-radius: 14px;
+}
+
+#btnLimpiar {
+    border-radius: 14px;
+    width: 56px;
+}
+
+@media (max-width: 1200px) {
+    .ng-grid {
+        grid-template-columns: 1fr;
+    }
+}
